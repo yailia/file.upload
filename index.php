@@ -1,4 +1,9 @@
-<? include $_SERVER['DOCUMENT_ROOT'] . './scripts/file.php' ?>
+<? 
+ini_set('error_reporting', E_ALL);
+include $_SERVER['DOCUMENT_ROOT'] . './include/config.php';
+include $_SERVER['DOCUMENT_ROOT'] . './scripts/file.php';
+
+ ?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -9,11 +14,16 @@
 </head>
 <body>
   <h1>Добавить картинки</h1> 
-  <a href="./gallery/">Все картинки ---></a>
+  <a href="/gallery">Все картинки ---></a>
   <br />
   <br />
   <form enctype="multipart/form-data" method="POST" action="/">
-    <input type="file" name="newImg[]" id="" multiple="true">
+    <input 
+    type="file" 
+    name="newImg[]" id="" 
+    multiple="true"
+    accept="<?= implode(', ', $grantedTypes) ?>"
+    >
     <button type="submit" name="add">Добавить*</button>
     <p>
       <small>* можно добавить не больше 5 картинок размером до 5МБ</small>

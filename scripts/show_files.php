@@ -1,8 +1,9 @@
 <?
-$pictures = scandir($_SERVER['DOCUMENT_ROOT'] . '/upload/');
+$pictures = scandir($_SERVER['DOCUMENT_ROOT'] . '/upload');
 function makeImagesList ($arr) 
-{ if (count($arr) < 3) {
-  echo 'Нет загруженных картинок';
+{ 
+    if (count($arr) < 3) {
+    echo 'Нет загруженных картинок';
 }
     for ($i = 2; $i < count($arr); $i++) {
      echo "<li style='border:1px solid gray; width:30vw; padding:1rem; list-style:none;'>

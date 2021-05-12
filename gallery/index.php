@@ -14,7 +14,7 @@ include $_SERVER{'DOCUMENT_ROOT'} . '/scripts/delete_files.php'; ?>
   <a href="/"><--- Home</a> <br />
   <form action="" method="post">
   <ul>
-    <? makeImagesList($pictures); ?>
+    <?= makeImagesList($pictures); ?>
   </ul>
   <button type="submit" name="deleteImg">Удалить выбранные</button>
   </form>
