@@ -15,7 +15,5 @@ function makeImagesList ($arr)
       </label>
     </li>";
     }
-
-    var_dump($arr);
 };
  
