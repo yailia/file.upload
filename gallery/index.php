@@ -1,6 +1,6 @@
 <?
-include $_SERVER['DOCUMENT_ROOT'] . '/scripts/show_files.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/scripts/delete_files.php'; ?>
+include $_SERVER['DOCUMENT_ROOT'] . './scripts/show_files.php';
+include $_SERVER['DOCUMENT_ROOT'] . './scripts/delete_files.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
