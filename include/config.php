@@ -2,4 +2,5 @@
 
 $grantedSize = 5;
 $grantedCount = 5;
-$grantedTypes = Array('image/png', 'image/jpg', 'image/jpeg');
+$grantedTypes = ['image/png', 'image/jpg', 'image/jpeg'];
+$uploadPath = $_SERVER['DOCUMENT_ROOT'] . '/upload';

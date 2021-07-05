@@ -1,13 +1,14 @@
-<?
-$pictures = scandir($_SERVER['DOCUMENT_ROOT'] . '/upload');
-function makeImagesList ($arr) 
+<?php
+$pictures = scandir($uploadPath);
+
+function makeImagesList ($arr, $path) 
 { 
     if (count($arr) < 3) {
     echo 'Нет загруженных картинок';
 }
     for ($i = 2; $i < count($arr); $i++) {
-      $picturePath = '/upload' . '/' . $arr[$i];
-     echo "<li style='border:1px solid gray; width:30vw; padding:1rem; list-style:none;'>
+      $picturePath = $path . '/' . $arr[$i];
+     echo "<li style=''>
      <img style='max-height:100px;' src=$picturePath >
      <label style='display:flex'>
         $arr[$i] <br />

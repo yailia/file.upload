@@ -4,8 +4,6 @@
   foreach ($_POST['delete'] as $key => $item) {
     if(in_array($key, scandir($uploadPath))) {
       unlink($uploadPath . '/' . $key);
-      header("Refresh:0");
     }
   }
-
 }

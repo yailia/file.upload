@@ -1,4 +1,5 @@
-<?
+<?php
+include $_SERVER['DOCUMENT_ROOT'] . '/include/config.php';
 include $_SERVER['DOCUMENT_ROOT'] . './scripts/show_files.php';
 include $_SERVER['DOCUMENT_ROOT'] . './scripts/delete_files.php'; ?>
 <!DOCTYPE html>
@@ -7,6 +8,7 @@ include $_SERVER['DOCUMENT_ROOT'] . './scripts/delete_files.php'; ?>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style/styles.css">
   <title>Просмотр загруженных картинок</title>
 </head>
 <body>
@@ -14,7 +16,7 @@ include $_SERVER['DOCUMENT_ROOT'] . './scripts/delete_files.php'; ?>
   <a href="/"><--- Home</a> <br />
   <form action="" method="post">
   <ul>
-    <?= makeImagesList($pictures); ?>
+    <?= makeImagesList($pictures, '/upload/'); ?>
   </ul>
   <button type="submit" name="deleteImg">Удалить выбранные</button>
   </form>

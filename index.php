@@ -20,7 +20,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/scripts/file.php';
   <form enctype="multipart/form-data" method="POST" action="/">
     <input 
     type="file" 
-    name="newImg[]" id="" 
+    name="newImg[]"
     multiple="true"
     accept="<?= implode(', ', $grantedTypes) ?>"
     >
