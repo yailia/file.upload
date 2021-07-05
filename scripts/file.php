@@ -1,5 +1,5 @@
 <?php
-$uploadPath = $_SERVER['DOCUMENT_ROOT'] . './upload';
+$uploadPath = $_SERVER['DOCUMENT_ROOT'] . '/upload';
 
 $err = [];
 if (file_exists($uploadPath)) {

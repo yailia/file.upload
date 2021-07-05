@@ -1,5 +1,5 @@
 <?
-$pictures = scandir($_SERVER['DOCUMENT_ROOT'] . './upload');
+$pictures = scandir($_SERVER['DOCUMENT_ROOT'] . '/upload');
 function makeImagesList ($arr) 
 { 
     if (count($arr) < 3) {

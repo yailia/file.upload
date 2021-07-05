@@ -1,7 +1,7 @@
 <? 
 ini_set('error_reporting', E_ALL);
-include $_SERVER['DOCUMENT_ROOT'] . './include/config.php';
-include $_SERVER['DOCUMENT_ROOT'] . './scripts/file.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/config.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/scripts/file.php';
 
  ?>
 <!DOCTYPE html>
