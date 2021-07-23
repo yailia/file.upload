@@ -1,4 +1,5 @@
 <?php
+ini_set('error_reporting', E_ALL);
 
 $err = [];
 if (file_exists($uploadPath)) {
@@ -32,16 +33,3 @@ if (file_exists($uploadPath)) {
     }
   }
 }
-
-function showMsg ($arr) {
-  if (empty($arr) && isset($_FILES['newImg'])) {
-    echo 'Файлы загружены успешно';
-  } else {
-    foreach ($arr as $key => $msg) {
-      foreach ($msg as $it) {
-        echo $it;
-      }
-    }
-  }
-}
-ini_set('error_reporting', E_ALL);

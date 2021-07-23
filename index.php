@@ -1,4 +1,4 @@
-<? 
+<?php
 ini_set('error_reporting', E_ALL);
 include $_SERVER['DOCUMENT_ROOT'] . '/include/config.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/scripts/file.php';
@@ -21,14 +21,22 @@ include $_SERVER['DOCUMENT_ROOT'] . '/scripts/file.php';
     <input 
     type="file" 
     name="newImg[]"
-    multiple="true"
+    multiple
     accept="<?= implode(', ', $grantedTypes) ?>"
     >
     <button type="submit" name="add">Добавить*</button>
     <p>
-      <small>* можно добавить не больше 5 картинок размером до 5МБ</small>
+      <small>* можно добавить не больше <?= $grantedCount ?> картинок размером до <?= $grantedSize ?>МБ</small>
     </p>
-    <p><? showMsg($err); ?>
+    <p><?php if (empty($err) && isset($_FILES['newImg'])) {
+    echo 'Файлы загружены успешно';
+  } else {
+    foreach ($err as $key => $msg) {
+      foreach ($msg as $it) {
+        echo $it;
+      }
+    }
+  } ?>
   </form>
 </body>
 </html>
