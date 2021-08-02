@@ -9,11 +9,11 @@ function makeImagesList ($arr, $path)
 }
     for ($i = 0; $i < count($arr); $i++) {
       $picturePath = $path . '/' . $arr[$i];
-     echo "<li style=''>
-     <img style='max-height:100px;' src=$picturePath >
-     <label style='display:flex'>
+     echo "<li>
+     <img src=$picturePath >
+     <label>
         $arr[$i] <br />
-        <input method='POST' style='margin-left:auto' type='checkbox' name='delete[$arr[$i]]' id=''>
+        <input method='POST' type='checkbox' name='delete[$arr[$i]]' id=''>
       </label>
     </li>";
     }

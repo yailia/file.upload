@@ -1,5 +1,30 @@
+body {
+  font-size: 16px;
+}
+
 li {
   border:1px solid gray;
   width:30vw; padding:1rem;
   list-style:none;
 }
+
+img {
+  max-height: 7rem;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+label {
+  display: flex;
+}
+
+input {
+  margin-left: auto;
+}
+
