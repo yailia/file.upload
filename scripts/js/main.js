@@ -1,11 +1,14 @@
 $(function(){
-  $('#form').on('submit', function(e){
+  $('form').on('submit', function(e){
     e.preventDefault();
-    var $that = $(this);
-    console.log($.ajax({
-      url: $that.attr('action'),
-      type: $that.attr('method'),
-      dataType: 'json',
-    }))
+    $.ajax({
+      url: 'handler.php',
+      data: new FormData(this),
+      success: function(json){
+        if(json){
+          console.log(FormData)
+        }
+      }
+    });
   });
 });

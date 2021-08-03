@@ -20,7 +20,7 @@ if (file_exists($uploadPath)) {
               if (move_uploaded_file($addingImgArray['tmp_name'][$i], $uploadPath .'/' . $imgName)) {
                 $err['success'][$i] = "<p class='green'> Файл $imgName успешно загружен </p>";
               } else {
-                $err['success'][$i] = "<p Что-то пошло не так. Попробуйте еще раз.</p>";
+                $err['success'][$i] = "<p> Что-то пошло не так. Попробуйте еще раз.</p>";
               }
             }
           } else {
