@@ -1,12 +1,17 @@
 $(function(){
   $('form').on('submit', function(e){
+    let form = new FormData(this);
+
     e.preventDefault();
     $.ajax({
       url: 'handler.php',
-      data: new FormData(this),
+      data: form,
+      method: 'post',
+      processData: false,
+      contentType: false,
       success: function(json){
         if(json){
-          console.log(FormData)
+          $('.list').replaceWith(json);
         }
       }
     });

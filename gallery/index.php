@@ -1,6 +1,6 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT'] . '/include/config.php';
-include $_SERVER['DOCUMENT_ROOT'] . './scripts/show_files.php'; ?>
+include $_SERVER['DOCUMENT_ROOT'] . '/scripts/show_files.php'; ?>
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -17,7 +17,7 @@ include $_SERVER['DOCUMENT_ROOT'] . './scripts/show_files.php'; ?>
   <h1>Загруженные файлы</h1>
   <a href="/"><--- Home</a> <br />
   <form id="form" method="post" action="handler.php" enctype="multipart/form-data">
-    <ul>
+    <ul class="list">
       <?= makeImagesList($pictures, '/upload/'); ?>
     </ul>
     <button class="delete-btn" type="submit" name="deleteImg">Удалить выбранные</button>
