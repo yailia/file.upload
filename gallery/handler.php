@@ -7,6 +7,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/scripts/file.php';
   foreach ($_POST['delete'] as $key => $item) {
     if(in_array($key, scandir($uploadPath))) {
       unlink($uploadPath . '/' . $key);
+      $pictures = scandir($uploadPath);
+      $pictures = array_values(array_diff($pictures, ['.', '..']));
     }
   }
 }

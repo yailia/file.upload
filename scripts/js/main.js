@@ -1,5 +1,6 @@
 $(function(){
   $('form').on('submit', function(e){
+    console.log(1)
     let form = new FormData(this);
 
     e.preventDefault();
@@ -9,10 +10,8 @@ $(function(){
       method: 'post',
       processData: false,
       contentType: false,
-      success: function(json){
-        if(json){
-          $('.list').replaceWith(json);
-        }
+      success: function(html) {
+          $('.list').html(html);
       }
     });
   });
